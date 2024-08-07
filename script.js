@@ -62,10 +62,3 @@ function highlightBtn() {
 }
 
 highlightBtn();
-
-
-cells.forEach(cell => {
-    cell.addEventListener("click", function() {
-        input(cell);
-    });
-});

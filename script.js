@@ -35,5 +35,5 @@ function input(cell) {
 }
 
 function toggle() {
-    
+
 }

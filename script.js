@@ -14,8 +14,26 @@ const win = [
 ];
 
 // Add click to input
-// Test with X first
 
-function input() {
+let player;
+
+function player1() {
+    player = "X";
+}
+
+function player2() {
+    player = "O";
+}
+
+
+
+function input(cell) {
+    if (cell.innerHTML === "")
+    {
+        cell.innerHTML = player;
+    }
+}
+
+function toggle() {
     
 }

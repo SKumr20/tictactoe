@@ -31,4 +31,5 @@ body {
 
 .game button.active {
     background-color: bisque;
+    border: 3px solid ;
 }

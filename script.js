@@ -16,24 +16,44 @@ const win = [
 // Add click to input
 
 let player;
+let playerX = [];
+let playerO = [];
 
 function player1() {
     player = "X";
+    highlightBtn();
 }
 
 function player2() {
     player = "O";
+    highlightBtn();
 }
 
 
 
 function input(cell) {
+    const cellIndex = parseInt((cell.getAttribute('cellIndex')));
     if (cell.innerHTML === "")
     {
         cell.innerHTML = player;
+        if (player === "X") {
+            playerX.push(cellIndex);
+        }
+        else {
+            playerO.push(cellIndex);
+        }
+        toggle();
     }
 }
 
 function toggle() {
-
+    if (player === "X") {
+        player = "O";
+    }
+    else {
+        player = "X";
+    }
 }
+
+console.log(playerO);
+console.log(playerX);

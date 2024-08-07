@@ -9,7 +9,9 @@
 </head>
 <body>
     <div class="game">
-        <button id="player1" onclick="player1()">Player 1</button>
+        Select Starting player:
+        <button id="player1" onclick="player1()">Player 1 - X</button>
+        <button id="player2" onclick="player2()">Player 2 - O</button>
         <div class="cellContainer">
             <div cellIndex="0" class="cell" onclick="input(this)"></div>
             <div cellIndex="1" class="cell" onclick="input(this)"></div>
@@ -21,7 +23,6 @@
             <div cellIndex="7" class="cell" onclick="input(this)"></div>
             <div cellIndex="8" class="cell" onclick="input(this)"></div>
         </div>
-        <button id="player2" onclick="player2()">Player 2</button>
         <h2 id="result"></h2>
     </div>
 </body>

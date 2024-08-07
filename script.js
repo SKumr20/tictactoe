@@ -15,7 +15,7 @@ const win = [
 
 // Add click to input
 
-let player;
+let player = "X"; // Default
 let playerX = [];
 let playerO = [];
 
@@ -43,6 +43,7 @@ function input(cell) {
             playerO.push(cellIndex);
         }
         toggle();
+        highlightBtn();
     }
 }
 
@@ -55,5 +56,16 @@ function toggle() {
     }
 }
 
-console.log(playerO);
-console.log(playerX);
+function highlightBtn() {
+    document.getElementById('player1').classList.toggle('active', player === 'X');
+    document.getElementById('player2').classList.toggle('active', player === 'O');
+}
+
+highlightBtn();
+
+
+cells.forEach(cell => {
+    cell.addEventListener("click", function() {
+        input(cell);
+    });
+});
